@@ -2,11 +2,11 @@
 
 Unofficial **TorrStream** package for ASUSTOR NAS based on the upstream [cash94 TorrStream / VIDAA Linux build](https://github.com/cash94/cash94.github.io/releases/tag/%23vidaa).
 
-**Tested by owner:** previous `VIDAA TorrStream` APKG `1.0.0.r02` works on AS5304T. **New revision `1.0.0.r03` has not yet been tested on a real NAS.** Target: **ADM 5.1.4.RM62**, x86-64 (AS53 series). The package keeps minimum firmware `5.1.0` so older supported ADM 5.1 versions are not unnecessarily blocked.
+**Tested by owner:** previous `VIDAA TorrStream` APKG `1.0.0.r02` works on AS5304T. **New revision `1.0.0.r04` has not yet been tested on a real NAS.** Target: **ADM 5.1.4.RM62**, x86-64 (AS53 series). The package keeps minimum firmware `5.1.0` so older supported ADM 5.1 versions are not unnecessarily blocked.
 
 ## Install or upgrade
 
-Download the [latest APK](https://github.com/Steinus/TorrStream-Asustoor/releases/latest) and install through **ADM → App Central → Management → Manual Install**. **Do not uninstall the old package first.** The internal ID remains `vidaa-torrstream`, even though the visible name changes to **TorrStream**. This makes it an in-place upgrade and preserves `/volume1/Docker/Vidaa`.
+Download the [latest APK](https://github.com/Steinus/TorrStream-Asustor/releases/latest) and install through **ADM → App Central → Management → Manual Install**. **Do not uninstall the old package first.** The internal ID remains `vidaa-torrstream`, even though the visible name changes to **TorrStream**. This makes it an in-place upgrade and preserves `/volume1/Docker/Vidaa`.
 
 Open `http://NAS_IP:8098` or click **TorrStream** on the ADM desktop. On first launch the package downloads upstream `TorrStream-linux-amd64`, plus the [Jellyfin FFmpeg](https://github.com/jellyfin/jellyfin-ffmpeg) portable tools.
 
@@ -83,3 +83,7 @@ The workflow uses `GITHUB_TOKEN` with `contents: write`; GitHub Actions must be 
 - ASUSTOR wrapper package and GitHub automation: **Steinus**
 
 Do not expose port 8098 to the public internet without suitable access controls.
+
+## Name shown in ADM
+
+The application display name is **TorrStream** in r03 and later. Its internal package ID remains `vidaa-torrstream` to enable in-place upgrades without losing `/volume1/Docker/Vidaa`. If ADM still shows the old name, check the installed package version in App Central, then reload ADM or sign out and back in. Do not uninstall the working package just to change its label.

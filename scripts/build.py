@@ -49,13 +49,13 @@ with zipfile.ZipFile(OUTPUT,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=9
 
 upstream=json.loads((ROOT/"tracking/upstream.json").read_text())
 tag=f"v{VERSION}"
-release=f"https://github.com/Steinus/TorrStream-Asustoor/releases/tag/{tag}"
+release=f"https://github.com/Steinus/TorrStream-Asustor/releases/tag/{tag}"
 latest={
  "version":VERSION,"package":CONFIG["general"]["package"],"name":CONFIG["general"]["name"],
  "adm_min":CONFIG["general"]["firmware"],"architecture":ARCH,
  "upstream_digest":upstream["digest"],"upstream_updated_at":upstream["asset_updated_at"],
  "release_url":release,
- "apk_url":f"https://github.com/Steinus/TorrStream-Asustoor/releases/download/{tag}/{OUTPUT.name}",
+ "apk_url":f"https://github.com/Steinus/TorrStream-Asustor/releases/download/{tag}/{OUTPUT.name}",
  "apk_sha256":hashlib.sha256(OUTPUT.read_bytes()).hexdigest()
 }
 (ROOT/"latest.json").write_text(json.dumps(latest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

@@ -2,11 +2,11 @@
   "general": {
     "package": "vidaa-torrstream",
     "name": "TorrStream",
-    "version": "1.0.0.r03",
+    "version": "1.0.0.r04",
     "depends": [],
     "developer": "cash94",
     "maintainer": "Steinus",
-    "website": "https://github.com/Steinus/TorrStream-Asustoor",
+    "website": "https://github.com/Steinus/TorrStream-Asustor",
     "architecture": "x86-64",
     "firmware": "5.1.0"
   },

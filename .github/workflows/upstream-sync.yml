@@ -22,7 +22,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'Steinus/TorrStream-Asustoor'
+    if: github.repository == 'Steinus/TorrStream-Asustor'
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
