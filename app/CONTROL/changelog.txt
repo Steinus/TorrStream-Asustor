@@ -1,3 +1,7 @@
+1.0.0.r05
+- Synced upstream cash94 TorrStream (SHA-256: ae9dc9c3eab27f6c2a99cd675ec8cb1954c6bda8320a0ef33e15bf75914ad63b).
+- Settings preserved.
+
 1.0.0.r04
 - Correct repository URLs after rename to TorrStream-Asustor.
 - Preserve TorrStream display name, package ID and settings on upgrades.
