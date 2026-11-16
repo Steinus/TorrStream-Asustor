@@ -1,0 +1,5 @@
+1.0.0.r03
+- Display name TorrStream; package ID unchanged for upgrades.
+- ADM 5.1.4.RM62 supported.
+- GitHub upstream release sync, APKG builds and update notification checker.
+- Settings preserved at /volume1/Docker/Vidaa.
