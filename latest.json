@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.r03",
+  "package": "vidaa-torrstream",
+  "name": "TorrStream",
+  "adm_min": "5.1.0",
+  "architecture": "x86-64",
+  "upstream_digest": "sha256:73e235b7577b63479a42f5e1e9e2958bebc85d74ff10e94efbe1c88599a08704",
+  "upstream_updated_at": "2026-11-16T11:33:02Z",
+  "release_url": "https://github.com/Steinus/TorrStream-Asustoor/releases/tag/v1.0.0.r03",
+  "apk_url": "https://github.com/Steinus/TorrStream-Asustoor/releases/download/v1.0.0.r03/torrstream_1.0.0.r03_x86-64.apk",
+  "apk_sha256": "80f719f01fd6995b2a449cd8708467e0fe220237116f125fdd963a12f6566bf3"
+}
