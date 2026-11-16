@@ -1,0 +1,34 @@
+{
+  "general": {
+    "package": "vidaa-torrstream",
+    "name": "TorrStream",
+    "version": "1.0.0.r03",
+    "depends": [],
+    "developer": "cash94",
+    "maintainer": "Steinus",
+    "website": "https://github.com/Steinus/TorrStream-Asustoor",
+    "architecture": "x86-64",
+    "firmware": "5.1.0"
+  },
+  "adm-desktop": {
+    "app": {
+      "type": "custom",
+      "protocol": "http",
+      "port": 8098,
+      "url": "/"
+    },
+    "privilege": {
+      "accessible": "administrators",
+      "customizable": true
+    }
+  },
+  "register": {
+    "port": [
+      8098
+    ],
+    "boot-priority": {
+      "start-order": 80,
+      "stop-order": 20
+    }
+  }
+}
