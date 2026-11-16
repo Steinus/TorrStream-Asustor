@@ -1,0 +1,1 @@
+TorrStream for ASUSTOR ADM 5.1 (x86-64), including ADM 5.1.4.RM62. Preserves package ID vidaa-torrstream and settings at /volume1/Docker/Vidaa. Web interface: http://NAS_IP:8098. Checks GitHub every six hours for a newer APKG and logs an update notice. Does not silently install updates.
