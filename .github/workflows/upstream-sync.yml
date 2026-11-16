@@ -10,7 +10,7 @@ on:
       - '.github/workflows/upstream-sync.yml'
   workflow_dispatch:
   schedule:
-    - cron: '17 3 * * *'
+    - cron: '7,37 * * * *'
 
 permissions:
   contents: write
