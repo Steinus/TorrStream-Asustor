@@ -14,7 +14,11 @@ fixture=os.getenv("UPSTREAM_RELEASE_FIXTURE")
 if fixture:
     release=json.loads(Path(fixture).read_text())
 else:
-    req=Request(API,headers={"Accept":"application/vnd.github+json","User-Agent":"Steinus-TorrStream-Asustoor","X-GitHub-Api-Version":"2022-11-28"})
+    headers={"Accept":"application/vnd.github+json","User-Agent":"Steinus-TorrStream-Asustor","X-GitHub-Api-Version":"2022-11-28"}
+    token=os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"]="Bearer "+token
+    req=Request(API,headers=headers)
     with urlopen(req,timeout=35) as resp: release=json.load(resp)
 assets=[a for a in release.get("assets",[]) if a.get("name")=="TorrStream-linux.zip"]
 if len(assets)!=1: raise SystemExit("Expected exactly one official Linux asset")
