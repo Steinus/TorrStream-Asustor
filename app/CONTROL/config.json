@@ -2,7 +2,7 @@
   "general": {
     "package": "vidaa-torrstream",
     "name": "TorrStream",
-    "version": "1.0.0.r05",
+    "version": "1.0.0.r06",
     "depends": [],
     "developer": "cash94",
     "maintainer": "Steinus",
