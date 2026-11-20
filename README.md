@@ -87,3 +87,7 @@ Do not expose port 8098 to the public internet without suitable access controls.
 ## Name shown in ADM
 
 The application display name is **TorrStream** in r03 and later. Its internal package ID remains `vidaa-torrstream` to enable in-place upgrades without losing `/volume1/Docker/Vidaa`. If ADM still shows the old name, check the installed package version in App Central, then reload ADM or sign out and back in. Do not uninstall the working package just to change its label.
+
+## ADM Start/Stop bugfix
+
+Starting in **1.0.0.r08**, the control script discovers this APK's managed process through `/proc`, even if its PID file is missing or outdated. ADM Stop stops all matching TorrStream instances and its update checker; ADM Start recognizes/adopts an existing instance instead of launching duplicates. Separate TorrServer installations are not affected. Keep `/volume1/Docker/Vidaa` when upgrading. To verify, use `sh /usr/local/AppCentral/vidaa-torrstream/CONTROL/start-stop.sh status`.
