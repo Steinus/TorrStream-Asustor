@@ -27,6 +27,13 @@ case "$PORT" in ''|*[!0-9]*) echo 'Invalid PORT' >&2; exit 1 ;; esac
 [ "$PORT" -ge 1 ] && [ "$PORT" -le 65535 ] || { echo 'Invalid PORT range' >&2; exit 1; }
 [ -n "$HOST" ] || exit 1
 export PORT HOST HOME="$DATA_DIR" XDG_CONFIG_HOME="$DATA_DIR" NODE_ENV=production
+# Prefer dedicated DTS-capable FFmpeg over NAS system FFmpeg.
+# Changes are scoped only to this process and its children.
+FFMPEG_PATH="$PROGRAM_DIR/ffmpeg/ffmpeg"
+FFPROBE_PATH="$PROGRAM_DIR/ffmpeg/ffprobe"
+PATH="$PROGRAM_DIR/ffmpeg:${PATH:-/usr/local/bin:/usr/bin:/bin}"
+export FFMPEG_PATH FFPROBE_PATH PATH
+echo "TorrStream: FFmpeg = $(command -v ffmpeg), FFprobe = $(command -v ffprobe)"
 cd "$PROGRAM_DIR"
 echo "TorrStream: starting on $HOST:$PORT"
 exec "$SERVER"

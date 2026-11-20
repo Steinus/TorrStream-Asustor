@@ -30,6 +30,8 @@ jobs:
           persist-credentials: true
       - name: Test ADM service lifecycle
         run: bash tests/test-lifecycle.sh
+      - name: Test FFmpeg selection
+        run: bash tests/test-ffmpeg-selection.sh
       - name: Check official release SHA-256
         env:
           GH_TOKEN: ${{ github.token }}

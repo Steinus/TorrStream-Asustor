@@ -91,3 +91,7 @@ The application display name is **TorrStream** in r03 and later. Its internal pa
 ## ADM Start/Stop bugfix
 
 Starting in **1.0.0.r08**, the control script discovers this APK's managed process through `/proc`, even if its PID file is missing or outdated. ADM Stop stops all matching TorrStream instances and its update checker; ADM Start recognizes/adopts an existing instance instead of launching duplicates. Separate TorrServer installations are not affected. Keep `/volume1/Docker/Vidaa` when upgrading. To verify, use `sh /usr/local/AppCentral/vidaa-torrstream/CONTROL/start-stop.sh status`.
+
+## DTS and FFmpeg selection (1.0.0.r09)
+
+The installer includes a dedicated FFmpeg at `/volume1/Docker/Vidaa/program/ffmpeg`. Some NAS configurations have a system `/usr/local/bin/ffmpeg` with no DTS (`dca`) decoder. Starting with 1.0.0.r09, the app-specific launcher prepends the bundled directory to its own `PATH` and exports `FFMPEG_PATH` and `FFPROBE_PATH`. It does **not** replace the system FFmpeg or touch other services. This fixes invocation by command name or these environment variables; if the upstream application explicitly invokes an unrelated absolute path, further upstream investigation is required.

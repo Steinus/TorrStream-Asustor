@@ -1,3 +1,8 @@
+1.0.0.r09
+- Prefer packaged Jellyfin FFmpeg and FFprobe over system executables for HLS.
+- Export PATH, FFMPEG_PATH and FFPROBE_PATH only inside TorrStream process.
+- Improve DTS decoder selection; preserve settings, port 8098 and other NAS services.
+
 1.0.0.r08
 - Fix ADM Stop/Start: find and stop orphaned app processes after stale/missing PID file.
 - Prevent duplicate instance starts; do not touch separate TorrServer service.
