@@ -1,3 +1,7 @@
+1.0.0.r10
+- Synced upstream cash94 TorrStream (SHA-256: d6941a82d41c23eab5ad24cfffb5ffc70f4dc6766a6a53ff9b0d975e87375d61).
+- Settings preserved.
+
 1.0.0.r09
 - Prefer packaged Jellyfin FFmpeg and FFprobe over system executables for HLS.
 - Export PATH, FFMPEG_PATH and FFPROBE_PATH only inside TorrStream process.
