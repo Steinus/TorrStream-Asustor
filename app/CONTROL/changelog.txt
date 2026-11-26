@@ -1,3 +1,7 @@
+1.0.0.r11
+- Synced upstream cash94 TorrStream (SHA-256: 3c150e513d521a2a8bce60d76608f519e40434411a4272ed6fc80cf72c71168e).
+- Settings preserved.
+
 1.0.0.r10
 - Synced upstream cash94 TorrStream (SHA-256: d6941a82d41c23eab5ad24cfffb5ffc70f4dc6766a6a53ff9b0d975e87375d61).
 - Settings preserved.
